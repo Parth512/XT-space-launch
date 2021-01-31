@@ -62,7 +62,7 @@ export class ProductLandingComponent implements OnInit {
   getSelectedproducts(param: any) {
     this.selectedFilters.launchYear = param.get('launchYear') === 'All' ? null : Number(param.get('launchYear'));
         this.selectedFilters.launchSuccess = param.get('launchSuccess') === 'All' ? null : (param.get('launchSuccess') === "true" ? true : false);
-        this.selectedFilters.landingSuccess = param.get('landingSuccess') === 'All' ? null : (param.get('landSuccess') === "true" ? true : false);
+        this.selectedFilters.landingSuccess = param.get('landingSuccess') === 'All' ? null : (param.get('landingSuccess') === "true" ? true : false);
         this.productService.getSelectedProducts(this.selectedFilters).pipe().subscribe((response: any) => {
           this.loading = false;
           this.productListStatus = this.processProductresponse(response);
