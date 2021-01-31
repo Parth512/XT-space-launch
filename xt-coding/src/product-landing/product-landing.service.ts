@@ -40,8 +40,7 @@ export class ProductLandingService {
                      "limit": 100 
                 } 
             }
-        });
-        console.log(body);
+        });        
         
         return this.http.post(url,body);
     }
